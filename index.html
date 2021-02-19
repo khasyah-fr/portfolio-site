@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <title>khasyahfr portfolio</title>
+</head>
+<!-- Main color: #6653FF and -->
+<!-- Kriteria: -->
+<!-- Menerapkan layout yang responsif -->
+<!-- Terdapat penerapan JavaScript dalam memanipulasi DOM -->
+<!-- Terdapat elemen <header>, <footer>, <main>, <article>, dan <aside> di berkas HTML -->
+<!-- Menampilkan identitas diri foto asli dan nama di elemen <aside> -->
+<!-- Menyusun layout dengan menggunakan float atau flexbox -->
+<body id="home">
+    <header>
+        <div id="headerLogo">
+            <a href="#home">
+                <img src="img/logo.png" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <div class="links">
+                <a href="#displayproject">Projects</a>
+                <a href="#displaycontact">Contact</a>
+            </div>
+            <div class="styleMode">
+                <input type="checkbox" id="switch" name="theme"/>
+                <label for="switch" id="switchLabel">Toggle</label>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro">
+            <aside id="profile">
+                <img src="img/anotherpic.png" alt="Foto diri">
+                <h2>Fitra Rahmani Khasyah</h1>
+                <p>- A noob who naively try some of this tech thingy -</p>
+            </aside>
+
+            <article id="description">
+                <h1>Hello World! <span>;</span></h1>
+                <p> There are only three hard problems in Computer Science. </p>
+                <p><span>1.</span>  Cache invalidation</p>
+                <p><span>2.</span> Naming things</p>
+                <p><span>4.</span> Asynchronous callbacks</p>
+                <p><span>3.</span> Off-by-one errors</p>
+                <p> Currently dealing with undergraduate degree and Bangkit Cloud Computing program while learning Golang & Docker.</p>
+            </article>
+        </section>
+
+        <section id="projects">
+            <div id="displayproject">
+                <h1>Check out some stuff I built!</h1>
+            </div>
+            <div class="flexcontainer">
+                <div class="project">
+                    <h1>Covid 19 Cases Tracker</h1>
+                    <img src="img/covidtracker.png" alt="project-1">
+                    <p>CSV-consuming Website Built using Java, Spring Boot, & Thymeleaf.</p>
+                    <a href="https://github.com/khasyah-fr/covid19CasesTracker-SpringBoot" target="_blank">View Code</a>
+                    <a href="https://glacial-harbor-89757.herokuapp.com/" target="_blank">Live Demo</a>
+                </div>
+
+                <div class="project">
+                    <h1>OneStopFootball</h1>
+                    <img src="img/osf.PNG" alt="project-2">
+                    <p>API-consuming Progressive Web App built using ES6 & Materialize.</p>
+                    <a href="https://github.com/khasyah-fr/onestopfootball-pwa" target="_blank">View Code</a>
+                    <a href="https://khasyah-fr.github.io/onestopfootball-pwa/" target="_blank">Live Demo</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div id="displaycontact">
+                <h1>Get in touch<span>.</span></h1>
+            </div>
+            <section id="links">
+                <div id="github">
+                    <a href="https://github.com/khasyah-fr">
+                        <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div id="linkedin">
+                    <a href="https://www.linkedin.com/in/fitra-rahmani">
+                        <i class="fa fa-linkedin fa-3x" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div id="gmail">
+                    <a href="mailto:bytenauts@gmail.com">
+                        <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p> Developed by <strong><em> khasyahfr </em> ☕ 👨‍💻 </strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

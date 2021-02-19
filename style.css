@@ -1,0 +1,548 @@
+/*
+===============
+CSS All
+===============
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  list-style: none;
+}
+
+/*
+===============
+CSS Variables
+===============
+*/
+
+:root {
+  /* Text Colour */
+  --primary: #6653ff;
+  --white: #f5f5f5;
+  --absolutewhite: #f5f5f5;
+  --black: #0f111b;
+  --accent: #c1262d;
+
+  /* Box Shadow */
+  --boxShadow: 0px -1px 8.37px #6653ff;
+}
+
+/* Dark Mode */
+html[data-theme="dark"] {
+  --primary: #c1262d;
+  --white: #0f111b;
+  --black: #ededed;
+  --accent: #6653ff;
+}
+
+/*
+===============
+
+===============
+*/
+
+html {
+  font-family: "Kanit", sans-serif;
+  font-size: 125%;
+  margin: 0px;
+  color: var(--black);
+}
+
+body {
+  background: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+===============
+Header
+===============
+*/
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 98%;
+  position: fixed;
+  top: 0.6vh;
+  left: 1vw;
+  z-index: 100;
+  box-shadow: var(--boxShadow);
+  background: var(--white);
+  border-radius: 0.5em;
+}
+
+#headerLogo {
+  width: 15%;
+}
+
+#headerLogo img {
+  width: 128px;
+}
+
+header nav {
+  margin-right: 0;
+  display: flex;
+  width: 90vw;
+}
+
+header ul {
+  display: flex;
+}
+
+.links {
+  display: block;
+  margin-left: 64px;
+  width: 65%;
+}
+
+.links a {
+  font-size: 0.9em;
+  text-decoration: none;
+  display: inline-block;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 0.5em;
+  transition: all 0.18s ease-in-out;
+  font-weight: 500;
+
+  border-bottom: solid var(--accent);
+  color: var(--primary);
+}
+
+nav a:hover {
+  background: var(--primary) !important;
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+.styleMode {
+  display: block;
+  width: 15%;
+  margin-right: 20px;
+  padding-top: 6px;
+}
+
+/*
+===============
+Switch Toggle
+===============
+*/
+
+#switch {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+#switchLabel {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 45px;
+  height: 26px;
+  background: var(--black);
+  float: right;
+  border-radius: 40px;
+  position: relative;
+}
+
+#switchLabel:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: var(--white);
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+#switch:checked + #switchLabel {
+  background: var(--black);
+}
+
+#switch:checked + #switchLabel:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+  background: var(--white);
+}
+
+#switchLabel:active:after {
+  width: 45px;
+}
+
+/*
+===============
+Main
+===============
+*/
+
+main {
+  background: var(--white);
+  margin-top: 120px;
+}
+
+/*
+===============
+Intro
+===============
+*/
+
+#intro {
+  display: block;
+  height: 80vh;
+  background-color: var(--white);
+}
+
+#intro #profile {
+  float: left;
+  background-color: var(--white);
+  color: var(--black);
+  width: 40%;
+}
+
+#intro #profile img {
+  display: block;
+  border-radius: 50%;
+  width: 30vh;
+  margin: 0 auto;
+  padding-top: 10vh;
+  border-bottom: solid var(--accent);
+}
+
+#intro #profile h2 {
+  margin-top: 4vh;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--black);
+}
+
+#intro #profile p {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--black);
+}
+
+#intro #description {
+  float: right;
+  background-color: var(--white);
+  color: var(--black);
+  width: 55%;
+  margin-top: 5vh;
+  padding: 0vh 2vh;
+}
+
+#intro #description h1 {
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+#intro #description span {
+  font-size: 1.5rem;
+  color: var(--primary);
+  padding-right: 4px;
+}
+
+#intro #description p {
+  font-size: 1rem;
+  margin-top: 1.25vh;
+  color: var(--black);
+}
+
+/*
+===============
+Projects
+===============
+*/
+
+#projects {
+  width: 100%;
+  height: 115vh;
+  background-color: var(--white);
+}
+
+#displayproject {
+  width: 90%;
+  height: 15vh;
+  padding-top: 17vh;
+  padding-right: 2vh;
+}
+
+#displayproject h1 {
+  text-align: right;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--accent);
+}
+
+.flexcontainer {
+  display: flex;
+  height: 80vh;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project {
+  padding: 0 4vh;
+  border: 0.3vh solid var(--primary);
+  height: 60vh;
+  width: 36vw;
+}
+
+.project h1 {
+  font-size: 1.5em;
+  padding-bottom: 0.5rem;
+  color: var(--black);
+}
+
+.project img {
+  width: 33vw;
+  height: 30vh;
+}
+
+.project p {
+  font-size: 1rem;
+  color: var(--black);
+  margin: 1vh 0vh;
+}
+
+.project a {
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.7vh 1vh;
+  color: var(--black);
+  background-color: var(--primary);
+}
+
+.project a:hover {
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+/*
+===============
+Contact
+===============
+*/
+
+#contact {
+    height: auto;
+    width: 100%;
+}
+
+#displaycontact {
+    height: 20vh;
+    padding-top: 12.5vh;
+    padding-left: 2vh;
+}
+
+#displaycontact h1 {
+    text-align: left;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    color: var(--primary);
+}
+
+#displaycontact span{
+    color: var(--accent);
+    font-size: 3.5rem;
+}
+
+#links {
+    display: flex;
+    background-color: var(--accent);
+    color: var(--absolutewhite);
+    padding: 4vh 0vh;
+    height: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+i:hover{
+    color: var(--primary);
+}
+
+#links a,
+#links a:visited, 
+#links a:active{
+    color: inherit;
+}
+
+/*
+===============
+Dark Mode
+===============
+*/
+
+html[data-theme="dark"] .links a {
+  color: var(--black);
+}
+
+html[data-theme="dark"] a.button {
+  color: var(--accent) !important;
+  border-color: var(--black) !important;
+}
+
+html[data-theme="dark"] a.button:hover {
+  color: var(--black) !important;
+}
+
+/*
+===============
+Footer
+===============
+*/
+
+footer {
+  text-align: right;
+  padding: 1em 1em;
+  background: var(--white);
+  margin: 5vh 1em 1em;
+  color: var(--black);
+  border-top-right-radius: 1.2em;
+  border-bottom-left-radius: 1.2em;
+  box-shadow: var(--boxShadow);
+}
+
+/*
+===============
+Media Queries
+===============
+*/
+
+@media only screen and (max-width: 900px) {
+  main {
+    margin-top: 92px;
+  }
+
+  #headerLogo img {
+    width: 96px;
+  }
+
+  #intro {
+    height: 130vh;
+  }
+
+  #intro #profile {
+    display: block;
+    width: 100%;
+    height: 60vh;
+  }
+
+  #intro #profile img {
+    padding-top: 32px;
+  }
+
+  #intro #profile p {
+    font-size: 0.7rem;
+  }
+
+  #intro #description {
+    float: none;
+    padding-top: 4vh;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    height: 80vh;
+  }
+
+  #intro #description p {
+    font-size: 0.7rem;
+  }
+
+  #displayproject {
+    width: 90%;
+    height: 12vh;
+    padding-top: 17vh;
+    padding-right: 1.5vh;
+  }
+
+  #displayproject h1 {
+    font-size: 1.3rem;
+  }
+
+  .project {
+    padding: 0 3vh;
+    height: 60vh;
+    width: 36vw;
+  }
+
+  .project h1 {
+    font-size: 1em;
+    padding-bottom: 0.5rem;
+    color: var(--black);
+  }
+
+  .project img {
+    width: 33vw;
+    height: 30vh;
+  }
+
+  .project p {
+    font-size: 0.7rem;
+  }
+
+  #contact {
+    height: 55vh;
+  }
+
+  footer {
+    margin: -2vh 1em 1em;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+    #projects {
+        height: 160vh;
+    }
+
+    .project {
+        width: 80%;
+        margin-top: 8px;
+    }
+
+    .project img {
+        width: 60vw;
+        height: 24vh;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+  #headerLogo img {
+    width: 72px;
+  }
+
+  .links {
+    margin-left: 18px;
+    margin-right: 16px;
+    margin-top: 18px;
+  }
+
+  .links a {
+    font-size: 0.8rem;
+  }
+
+  .styleMode {
+    margin-top: 0;
+    margin-right: 0;
+    width: 15%;
+    margin-bottom: 24px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
